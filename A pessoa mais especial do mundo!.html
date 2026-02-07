@@ -1,0 +1,215 @@
+A pessoa mais especial do mundo!
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Você sempre será especial 💜❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #5b2b82, #b11226);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .message {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .heart {
+      font-size: 2rem;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    .farewell {
+      padding: 50px 20px 70px;
+    }
+
+    .farewell-text {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: glowIn 2.5s ease forwards;
+    }
+
+    .farewell-sign {
+      font-size: 0.95rem;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 0.9; }
+    }
+
+    @keyframes glowIn {
+      0% { opacity: 0; }
+      50% { opacity: 1; text-shadow: 0 0 10px rgba(255,255,255,0.4); }
+      100% { opacity: 1; text-shadow: 0 0 6px rgba(255,255,255,0.25); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .message { font-size: 1.05rem; padding: 22px; }
+      .gallery { grid-template-columns: 1fr; }
+      #loveBtn { font-size: 1rem; padding: 16px 26px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Fiz para a garota mais especial do mundo 💜❤️</h1>
+  <p>Para <strong>Giovanna</strong></p>
+  <div class="heart">💜❤️</div>
+</header>
+
+<section>
+  <div class="message">
+    <p>
+      Giovanna, amar você é sentir tudo ao mesmo tempo.  
+      Paz, bagunça, calma e fogo.
+    </p>
+    <p>
+      Desde <strong>24 de dezembro</strong>, tudo ganhou mais sentido.  
+      Você reacendeu em mim a energia do amor.
+    </p>
+    <p>
+      Se eu tivesse que te escolher mil vezes,  
+      eu escolheria você em todas.
+    </p>
+    <p>
+      Meu amor é teu — inteiro, real e eterno 💜❤️  
+      <br><br><em>Com amor, Daniel</em>
+    </p>
+
+    <button id="loveBtn" onclick="loveHeart()" style="
+      margin-top:25px;
+      padding:18px 34px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(135deg,#b11226,#5b2b82);
+      color:white;
+      font-size:1.1rem;
+      cursor:pointer;
+      box-shadow:0 10px 20px rgba(0,0,0,0.4);">
+      💖 Clique se me ama 💖
+    </button>
+
+    <div id="heartText" style="display:none;font-size:2.5rem;margin-top:15px;animation:pulse 1s infinite;">
+      ❤️ Sim, eu te amo, Daniel ❤️
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Nossos Momentos ✨</h2>
+  <div class="gallery">
+    <img src="foto1.jpg.jpeg" alt="Nossos momentos especiais">
+  </div><img src="foto2.jpg.jpeg"alt="Nós dois">
+  </div><img src="foto3.jpg.jpeg"alt="amor e alegria">
+  </div><img src="foto4.jpg.jpeg"alt="amor">
+  </div><img src="foto5.jpg.jpeg"alt="sorrisos e abraços">
+</section>
+
+<footer class="farewell">
+  <p class="farewell-text">💜 Esse amor é só nosso — hoje, amanhã e sempre 💜</p>
+  <p class="farewell-sign">Daniel &amp; Giovanna 💞</p>
+</footer>
+
+<audio id="bgMusic" loop>
+  <source src="music/musica-romantica.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" style="
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:12px 18px;
+  border:none;
+  border-radius:30px;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  cursor:pointer;">
+  🎵 Música
+</button>
+
+<script>
+  function loveHeart() {
+    document.getElementById("heartText").style.display = "block";
+  }
+
+  const music = document.getElementById("bgMusic");
+  let playing = false;
+
+  function toggleMusic() {
+    if (!playing) {
+      music.volume = 0.3;
+      music.play();
+      playing = true;
+    } else {
+      music.pause();
+      playing = false;
+    }
+  }
+</script>
+
+</body>
+</html>
